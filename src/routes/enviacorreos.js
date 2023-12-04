@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const EmailSender = require('../config/mail');
+import EmailSender from '../config/mail.js';
 
 
 router.post('/enviar', async (req, res) => {

@@ -1,4 +1,4 @@
-const db = require('../config/conexion');
+import db from '../config/conexion.js';
 
 const obtenerEnfermedad = () => {
   return new Promise((resolve, reject) => {

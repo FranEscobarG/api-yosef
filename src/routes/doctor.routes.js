@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const controlador = require('../controllers/doctor.controller');
+import * as controlador from '../controllers/doctor.controller.js';
 
 router.get('/obtenerDoctor/', async (req, res) => {
   const carrera = await controlador.obtenerDoctor();

@@ -1,6 +1,6 @@
-import express from 'express';
+const express = require('express');
 const router = express.Router();
-import * as controlador from '../controllers/clinico.controller.js';
+const controlador = require('../controllers/clinico.controller');
 
 router.get('/obtenerClinico/', async (req, res) => {
   const carrera = await controlador.obtenerClinico();

@@ -1,6 +1,6 @@
-import express from 'express';
+const express = require('express');
 const router = express.Router();
-import * as controlador from '../controllers/Odontologia.controller.js';
+const controlador = require('../controllers/Odontologia.controller');
 
 router.get('/obtenerOdontologia/', async (req, res) => {
   const carrera = await controlador.obtenerOdontologia();

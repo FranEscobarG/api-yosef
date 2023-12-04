@@ -1,6 +1,6 @@
-import express from 'express';
+const express = require('express');
 const router = express.Router();
-import * as controlador from '../controllers/pago.controller.js';
+const controlador = require('../controllers/pago.controller');
 
 router.get('/obtenerPago/', async (req, res) => {
   const carrera = await controlador.obtenerPago();

@@ -1,6 +1,6 @@
-import express from 'express';
+const express = require('express');
 const router = express.Router();
-import * as controlador from '../controllers/citas.controller.js';
+const controlador = require('../controllers/citas.controller');
 
 router.get('/obtenerCita/', async (req, res) => {
   const carrera = await controlador.obtenerCita();

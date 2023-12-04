@@ -1,6 +1,6 @@
-import express from 'express';
+const express = require('express');
 const router = express.Router();
-import * as controlador from '../controllers/antecedentes.controller.js';
+const controlador = require('../controllers/antecedentes.controller');
 
 router.get('/obtenerAntecedentes/', async (req, res) => {
   const carrera = await controlador.obtenerAntecedentes();

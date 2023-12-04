@@ -1,4 +1,4 @@
-import db from '../config/conexion.js';
+const db = require('../config/conexion');
 
 const obtenerUsuarios = () => {
   return new Promise((resolve, reject) => {

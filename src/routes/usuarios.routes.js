@@ -1,6 +1,6 @@
-import express from 'express';
+const express = require('express');
 const router = express.Router();
-import * as controlador from '../controllers/carreras.controller.js';
+const controlador = require('../controllers/carreras.controller');
 
 router.get('/obtenerUser/', async (req, res) => {
   const carrera = await controlador.obtenerUser();
@@ -22,7 +22,7 @@ router.post('/crearUser/', async (req, res) => {
   const user = req.body;
   console.log(user);
   await controlador.crearUser(user);
-  res.json({ message: 'Usuario creado' });
+  res.json({message: 'Usuario creado'});
 }); 
 
 router.put('/actualizarUser/:id', async (req, res) => {
@@ -30,6 +30,7 @@ router.put('/actualizarUser/:id', async (req, res) => {
   await controlador.actualizarUser(req.params.id, user);
   res.json({ message: 'Usuario actualizado' });
 });
+
 
 router.delete('/borrarUser/:id', async (req, res) => {
   await controlador.borrarUser(req.params.id);
